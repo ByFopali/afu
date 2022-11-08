@@ -1,19 +1,19 @@
 <?php
 
-namespace App\Http\Controllers\Admin\ZsyType;
+namespace App\Http\Controllers\Admin\RankType;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\ZsyType\UpdateRequest;
-use App\Models\ZsyType;
+use App\Http\Requests\Admin\RankType\UpdateRequest;
+use App\Models\RankType;
 use Illuminate\Http\Request;
 
 class UpdateController extends Controller
 {
-    public function __invoke(UpdateRequest $request, ZsyType $zsytype)
+    public function __invoke(UpdateRequest $request, RankType $ranktype)
     {
         $data = $request->validated();
-        $zsytype->update($data);
+        $ranktype->update($data);
 //        dd($data);
-        return view('admin.zsy_types.show', compact('zsytype'));
+        return view('admin.rank_types.show', compact('ranktype'));
     }
 }

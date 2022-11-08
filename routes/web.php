@@ -16,9 +16,11 @@ Route::group(['namespace' => 'App\Http\Controllers\Main'], function () {
 });
 
 Route::group(['namespace' => 'App\Http\Controllers\Admin', 'prefix' => 'admin'], function () {
+
     Route::group(['namespace' => 'Main'], function () {
         Route::get('/', 'IndexController');
     });
+
     Route::group(['namespace' => 'ZsyType', 'prefix' => 'zsytypes'], function () {
         Route::get('/', 'IndexController')->name('admin.zsy_types.index');
         Route::get('/create', 'CreateController')->name('admin.zsy_types.create');
@@ -28,15 +30,26 @@ Route::group(['namespace' => 'App\Http\Controllers\Admin', 'prefix' => 'admin'],
         Route::patch('/{zsytype}', 'UpdateController')->name('admin.zsy_types.update');
         Route::delete('/{zsytype}', 'DeleteController')->name('admin.zsy_types.delete');
     });
-//    Route::group(['namespace' => 'ZsyList', 'prefix' => 'zsylists'], function () {
-//        Route::get('/', 'IndexController')->name('admin.zsy_lists.index');
-//        Route::get('/create', 'CreateController')->name('admin.zsy_lists.create');
-//        Route::post('/', 'StoreController')->name('admin.zsy_lists.store');
-//        Route::get('/{zsylist}', 'ShowController')->name('admin.zsy_lists.show');
-//        Route::get('/{zsylist}/edit', 'EditController')->name('admin.zsy_lists.edit');
-//        Route::patch('/{zsylist}', 'UpdateController')->name('admin.zsy_lists.update');
-//        Route::delete('/{zsylist}', 'DeleteController')->name('admin.zsy_lists.delete');
-//    });
+
+    Route::group(['namespace' => 'ZsyList', 'prefix' => 'zsylists'], function () {
+        Route::get('/', 'IndexController')->name('admin.zsy_lists.index');
+        Route::get('/create', 'CreateController')->name('admin.zsy_lists.create');
+        Route::post('/', 'StoreController')->name('admin.zsy_lists.store');
+        Route::get('/{zsylist}', 'ShowController')->name('admin.zsy_lists.show');
+        Route::get('/{zsylist}/edit', 'EditController')->name('admin.zsy_lists.edit');
+        Route::patch('/{zsylist}', 'UpdateController')->name('admin.zsy_lists.update');
+        Route::delete('/{zsylist}', 'DeleteController')->name('admin.zsy_lists.delete');
+    });
+
+    Route::group(['namespace' => 'RankType', 'prefix' => 'ranktypes'], function () {
+        Route::get('/', 'IndexController')->name('admin.rank_types.index');
+        Route::get('/create', 'CreateController')->name('admin.rank_types.create');
+        Route::post('/', 'StoreController')->name('admin.rank_types.store');
+        Route::get('/{ranktype}', 'ShowController')->name('admin.rank_types.show');
+        Route::get('/{ranktype}/edit', 'EditController')->name('admin.rank_types.edit');
+        Route::patch('/{ranktype}', 'UpdateController')->name('admin.rank_types.update');
+        Route::delete('/{ranktype}', 'DeleteController')->name('admin.rank_types.delete');
+    });
 
 
 });

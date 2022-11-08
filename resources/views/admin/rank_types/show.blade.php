@@ -7,14 +7,14 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6 d-flex align-items-center">
-                    <h1 class="m-0">{{$zsytype->name}}</h1>
-                    <a href="{{route('admin.zsy_types.create')}}" class="ml-2">
+                    <h1 class="m-0">{{$ranktype->name}}</h1>
+                    <a href="{{route('admin.rank_types.create')}}" class="ml-2">
                         <img src="{{asset('img/plus.png')}}" alt="add" style="width: 20px;">
                     </a>
-                    <a href="{{route('admin.zsy_types.edit', $zsytype->id)}}" class="ml-2">
+                    <a href="{{route('admin.rank_types.edit', $ranktype->id)}}" class="ml-2">
                         <img src="{{asset('img/editing.png')}}" alt="add" style="width: 20px;">
                     </a>
-                    <form action="{{route('admin.zsy_types.delete', $zsytype->id)}}" method="post">
+                    <form action="{{route('admin.rank_types.delete', $ranktype->id)}}" method="post">
                         @csrf
                         @method('delete')
                         <button type="submit" class="border-0 bg-transparent">
@@ -48,11 +48,11 @@
                                 <tbody>
                                     <tr>
                                         <td>ID</td>
-                                        <td>{{$zsytype->id}}</td>
+                                        <td>{{$ranktype->id}}</td>
                                     </tr>
                                     <tr>
                                         <td>Назва</td>
-                                        <td>{{$zsytype->name}}</td>
+                                        <td>{{$ranktype->name}}</td>
                                     </tr>
                                 </tbody>
                             </table>

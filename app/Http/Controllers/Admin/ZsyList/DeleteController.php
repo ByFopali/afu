@@ -9,9 +9,9 @@ use Illuminate\Http\Request;
 
 class DeleteController extends Controller
 {
-    public function __invoke(ZsyType $zsytype)
+    public function __invoke(ZsyList $zsylist)
     {
-        $zsytype->delete();
-        return redirect()->route('admin.zsy_types.index');
+        $zsylist->delete();
+        return redirect()->route('admin.zsy_lists.index');
     }
 }

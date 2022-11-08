@@ -7,14 +7,14 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6 d-flex align-items-center">
-                    <h1 class="m-0">{{$zsytype->name}}</h1>
-                    <a href="{{route('admin.zsy_types.create')}}" class="ml-2">
+                    <h1 class="m-0">{{$zsylist->name}}</h1>
+                    <a href="{{route('admin.zsy_lists.create')}}" class="ml-2">
                         <img src="{{asset('img/plus.png')}}" alt="add" style="width: 20px;">
                     </a>
-                    <a href="{{route('admin.zsy_types.edit', $zsytype->id)}}" class="ml-2">
+                    <a href="{{route('admin.zsy_lists.edit', $zsylist->id)}}" class="ml-2">
                         <img src="{{asset('img/editing.png')}}" alt="add" style="width: 20px;">
                     </a>
-                    <form action="{{route('admin.zsy_types.delete', $zsytype->id)}}" method="post">
+                    <form action="{{route('admin.zsy_lists.delete', $zsylist->id)}}" method="post">
                         @csrf
                         @method('delete')
                         <button type="submit" class="border-0 bg-transparent">
@@ -39,7 +39,7 @@
         <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
             <div class="row">
-                <div class="col-4" style="display: block; margin: 0 auto;">
+                <div class="col-8" style="display: block; margin: 0 auto;">
                     <div class="card">
 
                         <!-- /.card-header -->
@@ -48,11 +48,15 @@
                                 <tbody>
                                     <tr>
                                         <td>ID</td>
-                                        <td>{{$zsytype->id}}</td>
+                                        <td>{{$zsylist->id}}</td>
                                     </tr>
                                     <tr>
                                         <td>Назва</td>
-                                        <td>{{$zsytype->name}}</td>
+                                        <td>{{$zsylist->name}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Вид ЗСУ</td>
+                                        <td>{{$zsylist->zsy_type_id}}</td>
                                     </tr>
                                 </tbody>
                             </table>

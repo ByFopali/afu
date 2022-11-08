@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 
 class ShowController extends Controller
 {
-    public function __invoke(ZsyType $zsytype)
+    public function __invoke(ZsyList $zsylist)
     {
-        return view('admin.zsy_types.show', compact('zsytype'));
+        return view('admin.zsy_lists.show', compact('zsylist'));
     }
 }

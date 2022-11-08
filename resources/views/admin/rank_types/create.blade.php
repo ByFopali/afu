@@ -7,7 +7,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Види ЗСУ</h1>
+                    <h1 class="m-0">Тип звання</h1>
                 </div><!-- /.col -->
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -22,10 +22,10 @@
 
     <!-- Main content -->
     <div class="text-center" style="max-width: 350px; display: block; margin: 0 auto;">
-        <form action="{{route('admin.zsy_types.store')}}" method="post">
+        <form action="{{route('admin.rank_types.store')}}" method="post">
             @csrf
             <div class="mb-2">
-                <input type="text" class="form-control" name="name" placeholder="Назва виду ЗСУ" value="">
+                <input type="text" class="form-control" name="name" placeholder="Тип звання" value="">
                 @error('name')
                 <div class="text-danger">
                     Це поле потрібно заповнити!

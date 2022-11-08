@@ -7,8 +7,8 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6 d-flex align-items-center">
-                    <h1 class="m-0">Види ЗСУ</h1>
-                    <a href="{{route('admin.zsy_types.create')}}" class="ml-2">
+                    <h1 class="m-0">Тип звання</h1>
+                    <a href="{{route('admin.rank_types.create')}}" class="ml-2">
                         <img src="{{asset('img/plus.png')}}" alt="add" style="width: 20px;">
                     </a>
                 </div><!-- /.col -->
@@ -42,23 +42,23 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($zsytypes as $zsytype)
+                                @foreach($ranktypes as $ranktype)
                                     <tr>
-                                        <td>{{$zsytype->id}}</td>
-                                        <td>{{$zsytype->name}}</td>
+                                        <td>{{$ranktype->id}}</td>
+                                        <td>{{$ranktype->name}}</td>
                                         <td>
-                                            <a href="{{route('admin.zsy_types.show', $zsytype->id)}}">
+                                            <a href="{{route('admin.rank_types.show', $ranktype->id)}}">
                                                 <img src="{{asset('img/view.png')}}" alt="view" style="width: 20px;">
                                             </a>
                                         </td>
                                         <td>
                                             <a class="text-success"
-                                               href="{{route('admin.zsy_types.edit', $zsytype->id)}}">
+                                               href="{{route('admin.rank_types.edit', $ranktype->id)}}">
                                                 <img src="{{asset('img/create.png')}}" alt="edit" style="width: 20px;">
                                             </a>
                                         </td>
                                         <td>
-                                            <form action="{{route('admin.zsy_types.delete', $zsytype->id)}}" method="post">
+                                            <form action="{{route('admin.rank_types.delete', $ranktype->id)}}" method="post">
                                                 @csrf
                                                 @method('delete')
                                                 <button type="submit" class="border-0 bg-transparent">

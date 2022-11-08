@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->unsignedBigInteger('zsy_type_id');
-            $table->text('image');
+            $table->text('image')->nullable();
             $table->timestamps();
 
             $table->index('zsy_type_id', 'zsy_type_zsy_list_idx');

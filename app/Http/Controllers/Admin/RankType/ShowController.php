@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Admin\ZsyType;
+namespace App\Http\Controllers\Admin\RankType;
 
 use App\Http\Controllers\Controller;
-use App\Models\ZsyType;
+use App\Models\RankType;
 use Illuminate\Http\Request;
 
 class ShowController extends Controller
 {
-    public function __invoke(ZsyType $zsytype)
+    public function __invoke(RankType $ranktype)
     {
-        return view('admin.zsy_types.show', compact('zsytype'));
+        return view('admin.rank_types.show', compact('ranktype'));
     }
 }

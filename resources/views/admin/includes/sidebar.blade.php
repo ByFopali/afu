@@ -31,7 +31,7 @@
                         </a>
                     </li>
                     <li class="nav-item mt-2">
-                        <a href="#" class="nav-link">
+                        <a href="{{route('admin.zsy_lists.index')}}" class="nav-link">
                             <img src="{{asset('img/list1.png')}}" alt="list" width="22px">
                             <p class="ml-1 text-center">
                                 Список підрозділів ЗСУ
@@ -50,18 +50,18 @@
                 </a>
                 <ul class="nav nav-treeview" style="display: none;">
                     <li class="nav-item mt-2">
-                        <a href="#" class="nav-link">
-                            <img src="{{asset('img/categories.png')}}" alt="list" width="22px">
+                        <a href="{{route('admin.rank_types.index')}}" class="nav-link">
+                            <img src="{{asset('img/soldier.png')}}" alt="list" width="22px">
                             <p class="ml-1 text-center">
-                                Категорія звання
+                                Тип звання
                             </p>
                         </a>
                     </li>
                     <li class="nav-item mt-2">
                         <a href="#" class="nav-link">
-                            <img src="{{asset('img/soldier.png')}}" alt="list" width="22px">
+                            <img src="{{asset('img/categories.png')}}" alt="list" width="22px">
                             <p class="ml-1 text-center">
-                                Тип звання
+                                Категорія звання
                             </p>
                         </a>
                     </li>

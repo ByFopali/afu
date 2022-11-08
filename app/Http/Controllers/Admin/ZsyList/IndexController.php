@@ -10,7 +10,7 @@ class IndexController extends Controller
 {
     public function __invoke()
     {
-        $zsytypes = ZsyType::all();
-        return view('admin.zsy_types.index', compact('zsytypes'));
+        $zsylists = ZsyList::all();
+        return view('admin.zsy_lists.index', compact('zsylists'));
     }
 }

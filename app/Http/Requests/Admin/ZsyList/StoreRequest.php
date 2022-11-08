@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Admin\ZsyType;
+namespace App\Http\Requests\Admin\ZsyList;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -24,7 +24,9 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string'
+            'name' => 'required|string',
+            'zsy_type_id' => 'required|integer',
+            'image' => 'required|file'
         ];
     }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Admin\ZsyType;
+namespace App\Http\Requests\Admin\RankType;
 
 use Illuminate\Foundation\Http\FormRequest;
 

@@ -9,11 +9,11 @@ use Illuminate\Http\Request;
 
 class UpdateController extends Controller
 {
-    public function __invoke(UpdateRequest $request, ZsyType $zsytype)
+    public function __invoke(UpdateRequest $request, ZsyList $zsylist)
     {
         $data = $request->validated();
-        $zsytype->update($data);
+        $zsylist->update($data);
 //        dd($data);
-        return view('admin.zsy_types.show', compact('zsytype'));
+        return view('admin.zsy_lists.show', compact('zsylist'));
     }
 }
