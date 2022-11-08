@@ -56,7 +56,7 @@
                                     </tr>
                                     <tr>
                                         <td>Вид ЗСУ</td>
-                                        <td>{{$zsylist->zsy_type_id}}</td>
+                                        <td>{{$zsylist->zsyType->name}}</td>
                                     </tr>
                                 </tbody>
                             </table>

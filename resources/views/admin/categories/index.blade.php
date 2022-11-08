@@ -47,7 +47,7 @@
                                     <tr>
                                         <td>{{$category->id}}</td>
                                         <td>{{$category->name}}</td>
-                                        <td>{{$category->rank_type_id}}</td>
+                                        <td>{{$category->rankType->name}}</td>
                                         <td>
                                             <a href="{{route('admin.categories.show', $category->id)}}">
                                                 <img src="{{asset('img/view.png')}}" alt="view" style="width: 20px;">

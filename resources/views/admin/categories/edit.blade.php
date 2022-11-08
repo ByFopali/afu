@@ -37,7 +37,7 @@
                 @csrf
                 @method('patch')
                 <div class="mb-2">
-                    <input type="text" class="form-control" name="name" placeholder="Назва виду ЗСУ"
+                    <input type="text" class="form-control" name="name" placeholder="Назва категорії"
                            value="{{$category->name}}">
                     @error('name')
                     <div class="text-danger">

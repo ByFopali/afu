@@ -56,7 +56,7 @@
                                     </tr>
                                     <tr>
                                         <td>Тип звання</td>
-                                        <td>{{$category->rank_type_id}}</td>
+                                        <td>{{$category->rankType->name}}</td>
                                     </tr>
                                 </tbody>
                             </table>

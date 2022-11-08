@@ -25,7 +25,7 @@
         <form action="{{route('admin.categories.store')}}" method="post">
             @csrf
             <div class="mb-2">
-                <input type="text" class="form-control" name="name" placeholder="Тип звання" value="">
+                <input type="text" class="form-control" name="name" placeholder="Назва категорії" value="">
                 @error('name')
                 <div class="text-danger">
                     Це поле потрібно заповнити!
