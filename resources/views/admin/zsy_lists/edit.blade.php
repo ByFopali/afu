@@ -33,7 +33,7 @@
 
     <!-- Main content -->
     <div class="text-center" style="max-width: 350px; display: block; margin: 0 auto;">
-        <form action="{{route('admin.zsy_types.update', $zsylist->id)}}" method="POST" enctype="multipart/form-data">
+        <form action="{{route('admin.zsy_lists.update', $zsylist->id)}}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('patch')
             <div class="mb-2">
@@ -53,7 +53,7 @@
                     <label>Тип ЗСУ</label>
                     <select name="zsy_type_id" class="form-control" >
                         @foreach($zsytypes as $zsytype)
-                            <option alue="{{$zsytype->id}}"
+                            <option value="{{$zsytype->id}}"
                                 {{$zsytype->id == $zsylist->zsy_type_id ? 'selected' : ''}}>
                                 {{$zsytype->name}}
                             </option>

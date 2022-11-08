@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Http\Controllers\Admin\ZsyList;
+namespace App\Http\Controllers\Admin\Category;
 
 use App\Http\Controllers\Controller;
-use App\Models\ZsyList;
-use App\Models\ZsyType;
+use App\Models\Category;
+use App\Models\RankType;
 use Illuminate\Http\Request;
 
 class EditController extends Controller
 {
-    public function __invoke(ZsyList $zsylist)
+    public function __invoke(Category $category)
     {
-
-        $zsytypes = ZsyType::all();
-        return view('admin.zsy_lists.edit', compact('zsylist', 'zsytypes'));
+        $ranktypes = RankType::all();
+        $categories = Category::all();
+        return view('admin.categories.edit', compact('category', 'categories', 'ranktypes'));
     }
 }

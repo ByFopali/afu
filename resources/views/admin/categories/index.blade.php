@@ -7,8 +7,8 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6 d-flex align-items-center">
-                    <h1 class="m-0">Тип звання</h1>
-                    <a href="{{route('admin.rank_types.create')}}" class="ml-2">
+                    <h1 class="m-0">Категорія звання</h1>
+                    <a href="{{route('admin.categories.create')}}" class="ml-2">
                         <img src="{{asset('img/plus.png')}}" alt="add" style="width: 20px;">
                     </a>
                 </div><!-- /.col -->
@@ -38,27 +38,29 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Назва</th>
+                                    <th>Тип звання</th>
                                     <th colspan="3">Дія</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($ranktypes as $ranktype)
+                                @foreach($categories as $category)
                                     <tr>
-                                        <td>{{$ranktype->id}}</td>
-                                        <td>{{$ranktype->name}}</td>
+                                        <td>{{$category->id}}</td>
+                                        <td>{{$category->name}}</td>
+                                        <td>{{$category->rank_type_id}}</td>
                                         <td>
-                                            <a href="{{route('admin.rank_types.show', $ranktype->id)}}">
+                                            <a href="{{route('admin.categories.show', $category->id)}}">
                                                 <img src="{{asset('img/view.png')}}" alt="view" style="width: 20px;">
                                             </a>
                                         </td>
                                         <td>
                                             <a class="text-success"
-                                               href="{{route('admin.rank_types.edit', $ranktype->id)}}">
+                                               href="{{route('admin.categories.edit', $category->id)}}">
                                                 <img src="{{asset('img/create.png')}}" alt="edit" style="width: 20px;">
                                             </a>
                                         </td>
                                         <td>
-                                            <form action="{{route('admin.rank_types.delete', $ranktype->id)}}" method="post">
+                                            <form action="{{route('admin.categories.delete', $category->id)}}" method="post">
                                                 @csrf
                                                 @method('delete')
                                                 <button type="submit" class="border-0 bg-transparent">

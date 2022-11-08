@@ -1,17 +1,17 @@
 <?php
 
-namespace App\Http\Controllers\Admin\ZsyList;
+namespace App\Http\Controllers\Admin\Category;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\ZsyList\UpdateRequest;
-use App\Models\ZsyList;
+use App\Http\Requests\Admin\Category\UpdateRequest;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class DeleteController extends Controller
 {
-    public function __invoke(ZsyList $zsylist)
+    public function __invoke(Category $category)
     {
-        $zsylist->delete();
-        return redirect()->route('admin.zsy_lists.index');
+        $category->delete();
+        return redirect()->route('admin.categories.index');
     }
 }

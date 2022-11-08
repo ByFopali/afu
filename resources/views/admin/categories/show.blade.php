@@ -7,14 +7,14 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6 d-flex align-items-center">
-                    <h1 class="m-0">{{$ranktype->name}}</h1>
-                    <a href="{{route('admin.rank_types.create')}}" class="ml-2">
+                    <h1 class="m-0">{{$category->name}}</h1>
+                    <a href="{{route('admin.categories.create')}}" class="ml-2">
                         <img src="{{asset('img/plus.png')}}" alt="add" style="width: 20px;">
                     </a>
-                    <a href="{{route('admin.rank_types.edit', $ranktype->id)}}" class="ml-2">
+                    <a href="{{route('admin.categories.edit', $category->id)}}" class="ml-2">
                         <img src="{{asset('img/editing.png')}}" alt="add" style="width: 20px;">
                     </a>
-                    <form action="{{route('admin.rank_types.delete', $ranktype->id)}}" method="post">
+                    <form action="{{route('admin.categories.delete', $category->id)}}" method="post">
                         @csrf
                         @method('delete')
                         <button type="submit" class="border-0 bg-transparent">
@@ -48,11 +48,15 @@
                                 <tbody>
                                     <tr>
                                         <td>ID</td>
-                                        <td>{{$ranktype->id}}</td>
+                                        <td>{{$category->id}}</td>
                                     </tr>
                                     <tr>
                                         <td>Назва</td>
-                                        <td>{{$ranktype->name}}</td>
+                                        <td>{{$category->name}}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Тип звання</td>
+                                        <td>{{$category->rank_type_id}}</td>
                                     </tr>
                                 </tbody>
                             </table>

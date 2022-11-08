@@ -27,7 +27,7 @@ class UpdateRequest
         return [
             'name' => 'required|string',
             'zsy_type_id' => 'required|integer',
-            'image' => 'required|file'
+            'image' => 'nullable|file'
         ];
     }
 }

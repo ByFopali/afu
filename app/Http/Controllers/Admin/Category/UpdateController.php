@@ -1,19 +1,19 @@
 <?php
 
-namespace App\Http\Controllers\Admin\ZsyList;
+namespace App\Http\Controllers\Admin\Category;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Admin\ZsyList\UpdateRequest;
-use App\Models\ZsyList;
+use App\Http\Requests\Admin\Category\UpdateRequest;
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class UpdateController extends Controller
 {
-    public function __invoke(UpdateRequest $request, ZsyList $zsylist)
+    public function __invoke(UpdateRequest $request, Category $category)
     {
         $data = $request->validated();
-        $zsylist->update($data);
+        $category->update($data);
 //        dd($data);
-        return view('admin.zsy_lists.show', compact('zsylist'));
+        return view('admin.categories.show', compact('category'));
     }
 }
