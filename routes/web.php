@@ -61,6 +61,15 @@ Route::group(['namespace' => 'App\Http\Controllers\Admin', 'prefix' => 'admin'],
         Route::delete('/{category}', 'DeleteController')->name('admin.categories.delete');
     });
 
+    Route::group(['namespace' => 'Rank', 'prefix' => 'ranks'], function () {
+        Route::get('/', 'IndexController')->name('admin.ranks.index');
+        Route::get('/create', 'CreateController')->name('admin.ranks.create');
+        Route::post('/', 'StoreController')->name('admin.ranks.store');
+        Route::get('/{rank}', 'ShowController')->name('admin.ranks.show');
+        Route::get('/{rank}/edit', 'EditController')->name('admin.ranks.edit');
+        Route::patch('/{rank}', 'UpdateController')->name('admin.ranks.update');
+        Route::delete('/{rank}', 'DeleteController')->name('admin.ranks.delete');
+    });
 
 });
 

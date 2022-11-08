@@ -11,4 +11,9 @@ class Rank extends Model
 
     protected $table = 'ranks';
     protected $guarded = false;
+
+    public function categoryId(){
+        return $this->belongsTo(Category::class, 'category_id', 'id');
+    }
+
 }

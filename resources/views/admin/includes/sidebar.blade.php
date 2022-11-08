@@ -66,7 +66,7 @@
                         </a>
                     </li>
                     <li class="nav-item mt-2">
-                        <a href="#" class="nav-link">
+                        <a href="{{route('admin.ranks.index')}}" class="nav-link">
                             <img src="{{asset('img/chevron.png')}}" alt="list" width="22px">
                             <p class="ml-1 text-center">
                                 Звання

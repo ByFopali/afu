@@ -47,11 +47,11 @@
                             <table class="table table-hover text-nowrap">
                                 <tbody>
                                     <tr>
-                                        <td>ID</td>
+                                        <td style="font-weight: bold;">ID</td>
                                         <td>{{$zsytype->id}}</td>
                                     </tr>
                                     <tr>
-                                        <td>Назва</td>
+                                        <td style="font-weight: bold;">Назва</td>
                                         <td>{{$zsytype->name}}</td>
                                     </tr>
                                 </tbody>

@@ -7,14 +7,14 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6 d-flex align-items-center">
-                    <h1 class="m-0">{{$category->name}}</h1>
-                    <a href="{{route('admin.categories.create')}}" class="ml-2">
+                    <h1 class="m-0">{{$rank->name}}</h1>
+                    <a href="{{route('admin.ranks.create')}}" class="ml-2">
                         <img src="{{asset('img/plus.png')}}" alt="add" style="width: 20px;">
                     </a>
-                    <a href="{{route('admin.categories.edit', $category->id)}}" class="ml-2">
+                    <a href="{{route('admin.ranks.edit', $rank->id)}}" class="ml-2">
                         <img src="{{asset('img/editing.png')}}" alt="add" style="width: 20px;">
                     </a>
-                    <form action="{{route('admin.categories.delete', $category->id)}}" method="post">
+                    <form action="{{route('admin.ranks.delete', $rank->id)}}" method="post">
                         @csrf
                         @method('delete')
                         <button type="submit" class="border-0 bg-transparent">
@@ -39,7 +39,7 @@
         <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
             <div class="row">
-                <div class="col-4" style="display: block; margin: 0 auto;">
+                <div class="col-8" style="display: block; margin: 0 auto;">
                     <div class="card">
 
                         <!-- /.card-header -->
@@ -48,15 +48,13 @@
                                 <tbody>
                                     <tr>
                                         <td style="font-weight: bold;">ID</td>
-                                        <td>{{$category->id}}</td>
-                                    </tr>
-                                    <tr>
                                         <td style="font-weight: bold;">Назва</td>
-                                        <td>{{$category->name}}</td>
+                                        <td style="font-weight: bold;">Категорія</td>
                                     </tr>
                                     <tr>
-                                        <td style="font-weight: bold;">Тип звання</td>
-                                        <td>{{$category->rankType->name}}</td>
+                                        <td style="font-weight: bold;">{{$rank->id}}</td>
+                                        <td style="font-weight: bold;">{{$rank->name}}</td>
+                                        <td style="font-weight: bold;">{{$rank->categoryId->name}}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -64,7 +62,16 @@
                         <!-- /.card-body -->
                     </div>
                     <!-- /.card -->
+                    <div class="form-group text-center d-flex align-items-center">
+{{--                        <label>Опис звання</label>--}}
+                        <textarea name="description" class="form-control mr-2" rows="12" maxlength="1" style="resize: none;">{{$rank->description}}</textarea>
+                        <div class="d-block">
+                            <img src="{{asset('storage/' . $rank->image)}}" alt="image" class="mb-2" style="margin: 0 auto; width: 300px;">
+                        </div>
+                    </div>
+
                 </div>
+
                 <!-- ./col -->
             </div>
             <!-- /.row -->

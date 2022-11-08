@@ -47,15 +47,15 @@
                             <table class="table table-hover text-nowrap">
                                 <tbody>
                                     <tr>
-                                        <td>ID</td>
+                                        <td style="font-weight: bold;">ID</td>
                                         <td>{{$zsylist->id}}</td>
                                     </tr>
                                     <tr>
-                                        <td>Назва</td>
+                                        <td style="font-weight: bold;">Назва</td>
                                         <td>{{$zsylist->name}}</td>
                                     </tr>
                                     <tr>
-                                        <td>Вид ЗСУ</td>
+                                        <td style="font-weight: bold;">Вид ЗСУ</td>
                                         <td>{{$zsylist->zsyType->name}}</td>
                                     </tr>
                                 </tbody>
@@ -64,11 +64,16 @@
                         <!-- /.card-body -->
                     </div>
                     <!-- /.card -->
+                    <div class="form-group d-flex justify-content-center">
+                        <div class="d-block mt-5">
+                            <img src="{{asset('storage/' . $zsylist->image)}}" alt="image" class="mb-2" style="margin: 0 auto; width: 500px;">
+                        </div>
+
+                    </div>
                 </div>
                 <!-- ./col -->
             </div>
             <!-- /.row -->
-
         </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
