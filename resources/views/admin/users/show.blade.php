@@ -59,6 +59,17 @@
                                         <td>{{$user->email}}</td>
                                     </tr>
                                     <tr>
+                                        <td style="font-weight: bold;">Роль</td>
+                                        <td>
+{{--                                            {{$user->role}}--}}
+                                            @foreach($roles as $id => $role)
+                                                @if($user->role == $id)
+                                                    {{$role}}
+                                                @endif
+                                            @endforeach
+                                        </td>
+                                    </tr>
+                                    <tr>
                                         <td style="font-weight: bold;">Пароль</td>
                                         <td>
                                             <div class="form-group mb-0">

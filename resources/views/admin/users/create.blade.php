@@ -52,6 +52,23 @@
                             </div>
                             @enderror
                         </div>
+                        <div class="mb-2">
+                            <!-- select -->
+                            <div class="form-group">
+                                <label>Вибір ролі</label>
+                                <select name="role" class="form-control" >
+                                    @foreach($roles as $id => $role)
+                                        <option value="{{$id}}"
+                                            {{$id == old('role') ? 'selected' : ''}}>{{$role}}</option>
+                                    @endforeach
+                                </select>
+                                @error('role_id')
+                                <div class="text-danger">
+                                    {{$message}}
+                                </div>
+                                @enderror
+                            </div>
+                        </div>
                         <label for="exampleInputEmail1">Пароль</label>
                         <div class="form-group">
                             <div class="input-group">

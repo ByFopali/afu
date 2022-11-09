@@ -39,6 +39,7 @@
                                     <th>ID</th>
                                     <th>Імя користувача</th>
                                     <th>Пошта користувача</th>
+                                    <th>Роль</th>
                                     <th colspan="3">Дія</th>
                                 </tr>
                                 </thead>
@@ -48,6 +49,14 @@
                                         <td>{{$user->id}}</td>
                                         <td>{{$user->name}}</td>
                                         <td>{{$user->email}}</td>
+                                        <td>
+{{--                                            {{$user->role}}--}}
+                                            @foreach($roles as $id => $role)
+                                                @if($user->role == $id)
+                                                    {{$role}}
+                                                @endif
+                                            @endforeach
+                                        </td>
                                         <td>
                                             <a href="{{route('admin.users.show', $user->id)}}">
                                                 <img src="{{asset('img/view.png')}}" alt="view" style="width: 20px;">

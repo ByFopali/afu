@@ -46,7 +46,7 @@
                     <div class="card-body w-50 d-block" style="margin: 0 auto;">
                         <div class="form-group">
                             <label for="exampleInputEmail1">Імя</label>
-                            <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="Вкажіть імя користувача" value="">
+                            <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="Вкажіть імя користувача" value="{{$user->name}}">
                             @error('name')
                             <div class="text-danger">
                                 {{$message}}
@@ -62,10 +62,27 @@
                             </div>
                             @enderror
                         </div>
+                        <div class="mb-2">
+                            <!-- select -->
+                            <div class="form-group">
+                                <label>Вибір ролі</label>
+                                <select name="role" class="form-control" >
+                                    @foreach($roles as $id => $role)
+                                        <option value="{{$id}}"
+                                            {{$id == $user->role ? 'selected' : ''}}>{{$role}}</option>
+                                    @endforeach
+                                </select>
+                                @error('role')
+                                <div class="text-danger">
+                                    {{$message}}
+                                </div>
+                                @enderror
+                            </div>
+                        </div>
                         <label for="exampleInputPassword1">Пароль</label>
                         <div class="form-group">
                             <div class="input-group">
-                                <input type="password" name="password" id="password3" class="form-control" data-toggle="password">
+                                <input type="password" name="password" id="password3" class="form-control" data-toggle="password" value="{{$user->password}}">
                                 <div class="input-group-append">
                                     <div class="input-group-text">
                                         <i style="cursor: pointer;" id="VisibilityBtn" class="far fa-eye"></i>
