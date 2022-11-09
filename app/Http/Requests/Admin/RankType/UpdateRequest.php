@@ -28,4 +28,11 @@ class UpdateRequest
             'name' => 'required|string'
         ];
     }
+    public function messages()
+    {
+        return [
+            'name.required' => 'Поле повинно бути заповненим!',
+            'name.string' => 'Поле повинно бути строкового типу!'
+        ];
+    }
 }

@@ -28,7 +28,7 @@
                 <input type="text" class="form-control" name="name" placeholder="Назва звання" value="">
                 @error('name')
                 <div class="text-danger text-center">
-                    Це поле потрібно заповнити!
+                    {{$message}}
                 </div>
                 @enderror
             </div>
@@ -41,9 +41,14 @@
                         <select name="category_id" class="form-control" >
                             @foreach($categories as $category)
                                 <option value="{{$category->id}}"
-                                    {{$category->id == old('category_id') ? 'selected' : ''}}>{{$category->name}}</option>
+                                    {{$category->id == old('category_id') ? 'selected' : ''}}>{{$category->name}} - {{$category->rankType->name}}</option>
                             @endforeach
                         </select>
+                        @error('category_id')
+                        <div class="text-danger">
+                            {{$message}}
+                        </div>
+                        @enderror
                 </div>
             </div>
 
@@ -52,7 +57,7 @@
                 <textarea name="description" class="form-control" rows="10" placeholder="Інформацію вказуйте тут"></textarea>
                 @error('description')
                 <div class="text-danger text-center">
-                    Це поле потрібно заповнити!
+                    {{$message}}
                 </div>
                 @enderror
             </div>
@@ -70,7 +75,7 @@
                 </div>
                 @error('image')
                 <div class="text-danger text-center">
-                    Виберіть фото!
+                    {{$message}}
                 </div>
                 @enderror
             </div>

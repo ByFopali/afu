@@ -76,6 +76,19 @@
         bsCustomFileInput.init();
     });
 </script>
+//VisibilityBtn
+<script>
+const visibilityBtn = document.getElementById("VisibilityBtn");
+visibilityBtn.addEventListener("click", toggleVisibility);
+function toggleVisibility(){
+    const passwordInput = document.getElementById("password3");
+    if(passwordInput.type === "password"){
+        passwordInput.type = "text";
+    }else{
+        passwordInput.type = "password";
+    }
+}
+</script>
 <style>
     .custom-file-label:lang(en)~.custom-file-label::after{
         content: "Огляд";

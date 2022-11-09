@@ -41,7 +41,7 @@
                            value="{{$category->name}}">
                     @error('name')
                     <div class="text-danger">
-                        Це поле потрібно заповнити!
+                        {{$message}}
                     </div>
                     @enderror
                 </div>
@@ -58,6 +58,11 @@
                                 </option>
                             @endforeach
                         </select>
+                        @error('rank_type_id')
+                        <div class="text-danger">
+                            {{$message}}
+                        </div>
+                        @enderror
                     </div>
                 </div>
 

@@ -28,4 +28,13 @@ class StoreRequest extends FormRequest
             'rank_type_id' => 'required|integer'
         ];
     }
+    public function messages()
+    {
+        return [
+            'name.required' => 'Поле повинно бути заповненим!',
+            'name.string' => 'Поле повинно бути строкового типу!',
+            'rank_type_id.required' => 'Виберіть пункт!',
+            'rank_type_id.integer' => 'Поле повинно бути цілочисельного типу!'
+        ];
+    }
 }

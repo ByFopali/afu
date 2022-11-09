@@ -12,6 +12,7 @@ class EditController extends Controller
 {
     public function __invoke(Rank $rank)
     {
+
 //
 //        $rank = Rank::all();
         $categories = Category::all();

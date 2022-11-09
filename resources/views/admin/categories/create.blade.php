@@ -28,7 +28,7 @@
                 <input type="text" class="form-control" name="name" placeholder="Назва категорії" value="">
                 @error('name')
                 <div class="text-danger">
-                    Це поле потрібно заповнити!
+                    {{$message}}
                 </div>
                 @enderror
             </div>
@@ -44,6 +44,11 @@
                                 {{$ranktype->id == old('rank_type_id') ? 'selected' : ''}}>{{$ranktype->name}}</option>
                         @endforeach
                     </select>
+                    @error('rank_type_id')
+                    <div class="text-danger">
+                        {{$message}}
+                    </div>
+                    @enderror
                 </div>
             </div>
 

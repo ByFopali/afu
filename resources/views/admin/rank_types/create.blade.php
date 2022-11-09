@@ -28,7 +28,7 @@
                 <input type="text" class="form-control" name="name" placeholder="Тип звання" value="">
                 @error('name')
                 <div class="text-danger">
-                    Це поле потрібно заповнити!
+                    {{$message}}
                 </div>
                 @enderror
             </div>

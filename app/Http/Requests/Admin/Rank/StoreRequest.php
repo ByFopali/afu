@@ -30,4 +30,17 @@ class StoreRequest extends FormRequest
             'image' => 'required|file'
         ];
     }
+    public function messages()
+    {
+        return [
+            'name.required' => 'Поле повинно бути заповненим!',
+            'name.string' => 'Поле повинно бути строкового типу!',
+            'category_id.required' => 'Виберіть пункт!',
+            'category_id.integer' => 'Поле повинно бути цілочисельного типу!',
+            'description.required' => 'Поле повинно бути заповненим!',
+            'description.string' => 'Поле повинно бути строкового типу!',
+            'image.required' => 'Поле повинно бути заповненим!',
+            'image.file' => 'необхідно вибрати файл!',
+        ];
+    }
 }

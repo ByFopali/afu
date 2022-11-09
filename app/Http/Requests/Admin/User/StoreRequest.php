@@ -1,11 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Admin\Category;
+namespace App\Http\Requests\Admin\User;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateRequest
-    extends FormRequest
+class StoreRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,7 +25,8 @@ class UpdateRequest
     {
         return [
             'name' => 'required|string',
-            'rank_type_id' => 'required|integer'
+            'email' => 'required|string',
+            'password' => 'required|string'
         ];
     }
     public function messages()
@@ -34,8 +34,10 @@ class UpdateRequest
         return [
             'name.required' => 'Поле повинно бути заповненим!',
             'name.string' => 'Поле повинно бути строкового типу!',
-            'rank_type_id.required' => 'Виберіть пункт!',
-            'rank_type_id.integer' => 'Поле повинно бути цілочисельного типу!'
+            'email.required' => 'Поле повинно бути заповненим!',
+            'email.string' => 'Поле повинно бути строкового типу!',
+            'password.required' => 'Поле повинно бути заповненим!',
+            'password.string' => 'Поле повинно бути строкового типу!'
         ];
     }
 }

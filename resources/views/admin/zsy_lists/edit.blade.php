@@ -40,7 +40,7 @@
                 <input type="text" class="form-control" name="name" placeholder="Назва підрозділу ЗСУ" value="{{$zsylist->name}}">
                 @error('name')
                 <div class="text-danger">
-                    Це поле потрібно заповнити!
+                    {{$message}}
                 </div>
                 @enderror
             </div>
@@ -59,6 +59,11 @@
                             </option>
                         @endforeach
                     </select>
+                    @error('zsy_type_id')
+                    <div class="text-danger">
+                        {{$message}}
+                    </div>
+                    @enderror
                 </div>
             </div>
 
@@ -79,7 +84,7 @@
                 </div>
                 @error('image')
                 <div class="text-danger text-center">
-                    Виберіть фото!
+                    {{$message}}
                 </div>
                 @enderror
             </div>

@@ -7,8 +7,8 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6 d-flex align-items-center">
-                    <h1 class="m-0">Категорія звання</h1>
-                    <a href="{{route('admin.categories.create')}}" class="ml-2">
+                    <h1 class="m-0">Користувачі</h1>
+                    <a href="{{route('admin.users.create')}}" class="ml-2">
                         <img src="{{asset('img/plus.png')}}" alt="add" style="width: 20px;">
                     </a>
                 </div><!-- /.col -->
@@ -28,7 +28,7 @@
         <div class="container-fluid">
             <!-- Small boxes (Stat box) -->
             <div class="row">
-                <div class="col-8" style="display: block; margin: 0 auto;">
+                <div class="col-7" style="display: block; margin: 0 auto;">
                     <div class="card">
 
                         <!-- /.card-header -->
@@ -37,34 +37,34 @@
                                 <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Назва</th>
-                                    <th>Тип звання</th>
+                                    <th>Імя користувача</th>
+                                    <th>Пошта користувача</th>
                                     <th colspan="3">Дія</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($categories as $category)
+                                @foreach($users as $user)
                                     <tr>
-                                        <td>{{$category->id}}</td>
-                                        <td>{{$category->name}}</td>
-                                        <td>{{$category->rankType->name}}</td>
+                                        <td>{{$user->id}}</td>
+                                        <td>{{$user->name}}</td>
+                                        <td>{{$user->email}}</td>
                                         <td>
-                                            <a href="{{route('admin.categories.show', $category->id)}}">
+                                            <a href="{{route('admin.users.show', $user->id)}}">
                                                 <img src="{{asset('img/view.png')}}" alt="view" style="width: 20px;">
                                             </a>
                                         </td>
                                         <td>
                                             <a class="text-success"
-                                               href="{{route('admin.categories.edit', $category->id)}}">
+                                               href="{{route('admin.users.edit', $user->id)}}">
                                                 <img src="{{asset('img/create.png')}}" alt="edit" style="width: 20px;">
                                             </a>
                                         </td>
                                         <td>
-                                            <form action="{{route('admin.categories.delete', $category->id)}}" method="post">
+                                            <form action="{{route('admin.users.delete', $user->id)}}" method="post">
                                                 @csrf
                                                 @method('delete')
                                                 <button type="submit" class="border-0 bg-transparent">
-                                                    <img role="button" src="{{asset('img/delete.png')}}" alt="edit" style="width: 20px;">
+                                                    <img role="button" src="{{asset('img/delete.png')}}" alt="delete" style="width: 20px;">
 {{--                                                    <i class="fas fa-trash text-danger" role="button"></i>--}}
                                                 </button>
                                             </form>

@@ -13,7 +13,9 @@ class StoreController extends Controller
     public function __invoke(StoreRequest $request)
     {
         $data = $request->validated();
-        $data['image'] = Storage::disk('public')->put('/images', $data['image']);
+        if( array_key_exists('image',$data)) {
+            $data['image'] = Storage::disk('public')->put('/images', $data['image']);
+        }
         Rank::firstOrCreate($data);
         return redirect()->route('admin.ranks.index');
     }

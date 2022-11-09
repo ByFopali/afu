@@ -30,4 +30,15 @@ class UpdateRequest
             'image' => 'nullable|file'
         ];
     }
+    public function messages()
+    {
+        return [
+            'name.required' => 'Поле повинно бути заповненим!',
+            'name.string' => 'Поле повинно бути строкового типу!',
+            'zsy_type_id.required' => 'Виберіть пункт!',
+            'zsy_type_id.integer' => 'Поле повинно бути цілочисельного типу!',
+            'image.required' => 'Поле повинно бути заповненим!',
+            'image.file' => 'необхідно вибрати файл!'
+        ];
+    }
 }

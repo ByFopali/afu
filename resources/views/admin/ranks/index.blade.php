@@ -39,6 +39,7 @@
                                     <th>ID</th>
                                     <th>Назва</th>
                                     <th>Категорія</th>
+                                    <th>Тип звання</th>
                                     <th colspan="3">Дія</th>
                                 </tr>
                                 </thead>
@@ -48,6 +49,13 @@
                                         <td>{{$rank->id}}</td>
                                         <td>{{$rank->name}}</td>
                                         <td>{{$rank->categoryId->name}}</td>
+                                        <td>
+                                            @foreach($categories as $category)
+                                                @if($category->id == $rank->category_id)
+                                                    {{$category->rankType->name}}
+                                                @endif
+                                            @endforeach
+                                        </td>
                                         <td>
                                             <a href="{{route('admin.ranks.show', $rank->id)}}">
                                                 <img src="{{asset('img/view.png')}}" alt="view" style="width: 20px;">

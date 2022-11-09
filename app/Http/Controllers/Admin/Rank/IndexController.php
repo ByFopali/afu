@@ -12,8 +12,8 @@ class IndexController extends Controller
 {
     public function __invoke()
     {
-//        $categories = Category::all();
+        $categories = Category::all();
         $ranks = Rank::all();
-        return view('admin.ranks.index', compact('ranks'));
+        return view('admin.ranks.index', compact('ranks', 'categories'));
     }
 }
