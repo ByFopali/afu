@@ -37,27 +37,25 @@
                             </ul>
                             <ul class="navbar-top-right-menu">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link"><i class="mdi mdi-magnify"></i></a>
+                                    <a href="#" class="nav-link"></a>
                                 </li>
-                                @auth()
-                                    <li class="nav-item">
-                                        <a href="#" class="nav-link">зайшов {{auth()->user()->name}}</a>
-                                    </li>
-                                @if(auth()->user()->role == 0)
+                                    @auth()
                                         <li class="nav-item">
-                                            <form action="{{route('admin.main.index')}}" >
-                                                <input type="submit" class="btn btn-primary" value="admin">
+                                            <a href="{{route('admin.main.index')}}" class="nav-link">Вітаю, {{auth()->user()->name}}</a>
+                                        </li>
+                                    @if(auth()->user()->role == 0)
+                                            <li class="nav-item">
+                                                    <a href="{{route('admin.main.index')}}" class="nav-link">Адмін панель</a>
+                                            </li>
+                                        @endif
+                                        <li class="nav-item">
+                                            <form action="{{route('logout')}}" method="post">
+                                                @csrf
+{{--                                                <a role="button" >Вийти</a>--}}
+                                                <input style="font-size: 18px; font-weight: 500;" type="submit" class="btn btn-primary ml-2 p-1" value="Вийти">
                                             </form>
                                         </li>
-                                    @endif
-
-                                    <li class="nav-item">
-                                        <form action="{{route('logout')}}" method="post">
-                                            @csrf
-                                            <input type="submit" class="btn btn-primary" value="Вийти">
-                                        </form>
-                                    </li>
-                                @endauth
+                                    @endauth
                                 @guest()
                                     <li class="nav-item">
                                         <a href="{{route('login')}}" class="nav-link">Вхід</a>
@@ -73,7 +71,7 @@
                     <div class="navbar-bottom">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
-                                <a class="navbar-brand" href="#">
+                                <a class="navbar-brand" href="{{route('main.index')}}">
                                     <span style="padding: 0 5px; font-size: 28px; color: white; background: linear-gradient(0deg, rgba(228,255,0,0.5) 50%, rgba(30,177,207,0.5) 50%); border-radius: 7px;" class="footer-logo">Збройні сили України</span>
                                     </a>
                             </div>

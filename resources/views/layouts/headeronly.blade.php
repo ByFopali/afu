@@ -25,7 +25,7 @@
 <div class="container-scroller">
     <div class="main-panel">
         <!-- partial:partials/_navbar.html -->
-        <header id="header" style="">
+        <header id="header" style="margin: 0 0 35px 0;">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <div class="navbar-top">
@@ -53,7 +53,7 @@
                     <div class="navbar-bottom">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
-                                <a class="navbar-brand" href="#">
+                                <a class="navbar-brand" href="{{route('main.index')}}">
                                     <span style="padding: 0 5px; font-size: 28px; color: white; background: linear-gradient(0deg, rgba(228,255,0,0.5) 50%, rgba(30,177,207,0.5) 50%); border-radius: 7px;" class="footer-logo">Збройні сили України</span>
                                     </a>
                             </div>
