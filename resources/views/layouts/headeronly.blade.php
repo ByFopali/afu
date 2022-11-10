@@ -94,17 +94,17 @@
                             </div>
                             <ul class="social-media">
                                 <li>
-                                    <a href="#">
+                                    <a href="https://uk-ua.facebook.com/GeneralStaff.ua/" target="_blank">
                                         <i class="mdi mdi-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="https://www.youtube.com/channel/UC10u3bDYe1HMHOQLvufXqjA" target="_blank">
                                         <i class="mdi mdi-youtube"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="https://twitter.com/generalstaffua/with_replies" target="_blank">
                                         <i class="mdi mdi-twitter"></i>
                                     </a>
                                 </li>

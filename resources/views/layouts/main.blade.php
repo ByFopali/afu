@@ -112,17 +112,17 @@
                             </div>
                             <ul class="social-media">
                                 <li>
-                                    <a href="#">
+                                    <a href="https://uk-ua.facebook.com/GeneralStaff.ua/" target="_blank">
                                         <i class="mdi mdi-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="https://www.youtube.com/channel/UC10u3bDYe1HMHOQLvufXqjA" target="_blank">
                                         <i class="mdi mdi-youtube"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="https://twitter.com/generalstaffua/with_replies" target="_blank">
                                         <i class="mdi mdi-twitter"></i>
                                     </a>
                                 </li>
@@ -143,26 +143,24 @@
             <div class="footer-top">
                 <div class="container">
                     <div class="row d-flex justify-content-between">
-                        <div class="col-sm-7">
-                            <span style="padding: 0 5px; font-size: 28px; color: white; background: linear-gradient(0deg, rgba(228,255,0,0.5) 50%, rgba(30,177,207,0.5) 50%); border-radius: 7px;" class="footer-logo">Збройні сили України</span>
-                            <h5 class="font-weight-normal mt-4 mb-5">
-                                Newspaper is your news, entertainment, music fashion website. We
-                                provide you with the latest breaking news and videos straight from
-                                the entertainment industry.
+                        <div class="col-sm-6">
+                            <span style="padding: 0 5px; font-size: 28px; font-weight: 700; color: white; background: linear-gradient(0deg, rgba(228,255,0,0.5) 50%, rgba(30,177,207,0.5) 50%); border-radius: 7px;" class="footer-logo">Збройні сили України</span>
+                            <h5 class="font mt-4 mb-5" style="font-weight: 700; font-family: Source Sans Pro;">
+                                Сайт довідник інформаційної системи Збройних Сил України про військові звання та підрозділи.
                             </h5>
                             <ul class="social-media mb-3">
                                 <li>
-                                    <a href="#">
+                                    <a href="https://uk-ua.facebook.com/GeneralStaff.ua/">
                                         <i class="mdi mdi-facebook"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="https://www.youtube.com/channel/UC10u3bDYe1HMHOQLvufXqjA">
                                         <i class="mdi mdi-youtube"></i>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="https://twitter.com/generalstaffua/with_replies">
                                         <i class="mdi mdi-twitter"></i>
                                     </a>
                                 </li>
@@ -244,7 +242,7 @@
                         <div class="col-sm-12">
                             <div class="d-sm-flex justify-content-between align-items-center">
                                 <div class="fs-14 font-weight-600">
-                                    © 2020 @ <a href="https://www.bootstrapdash.com/" target="_blank" class="text-white"> BootstrapDash</a>. All rights reserved.
+                                    © 2022 @ <a href="https://www.bootstrapdash.com/" target="_blank" class="text-white"> BootstrapDash</a>. All rights reserved.
                                 </div>
                                 <div class="fs-14 font-weight-600">
                                     Handcrafted by <a href="https://www.bootstrapdash.com/" target="_blank" class="text-white">BootstrapDash</a>
