@@ -79,22 +79,6 @@
                                 @enderror
                             </div>
                         </div>
-                        <label for="exampleInputPassword1">Пароль</label>
-                        <div class="form-group">
-                            <div class="input-group">
-                                <input type="password" name="password" id="password3" class="form-control" data-toggle="password" value="{{$user->password}}">
-                                <div class="input-group-append">
-                                    <div class="input-group-text">
-                                        <i style="cursor: pointer;" id="VisibilityBtn" class="far fa-eye"></i>
-                                    </div>
-                                </div>
-                            </div>
-                            @error('password')
-                            <div class="text-danger">
-                                {{$message}}
-                            </div>
-                            @enderror
-                        </div>
                     </div>
                     <!-- /.card-body -->
 

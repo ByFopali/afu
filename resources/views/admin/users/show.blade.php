@@ -69,20 +69,20 @@
                                             @endforeach
                                         </td>
                                     </tr>
-                                    <tr>
-                                        <td style="font-weight: bold;">Пароль</td>
-                                        <td>
-                                            <div class="form-group mb-0">
-                                                <div class="input-group">
-                                                    <input type="password" id="password3" class="form-control" data-toggle="password" value="{{$user->password}}">
-                                                    <div class="input-group-append">
-                                                        <div class="input-group-text">
-                                                            <i style="cursor: pointer;" id="VisibilityBtn" class="far fa-eye"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                        </td>
-                                    </tr>
+{{--                                    <tr>--}}
+{{--                                        <td style="font-weight: bold;">Пароль</td>--}}
+{{--                                        <td>--}}
+{{--                                            <div class="form-group mb-0">--}}
+{{--                                                <div class="input-group">--}}
+{{--                                                    <input type="password" id="password3" class="form-control" data-toggle="password" value="{{  }}">--}}
+{{--                                                    <div class="input-group-append">--}}
+{{--                                                        <div class="input-group-text">--}}
+{{--                                                            <i style="cursor: pointer;" id="VisibilityBtn" class="far fa-eye"></i>--}}
+{{--                                                        </div>--}}
+{{--                                                    </div>--}}
+{{--                                                </div>--}}
+{{--                                        </td>--}}
+{{--                                    </tr>--}}
 
                                 </tbody>
                             </table>

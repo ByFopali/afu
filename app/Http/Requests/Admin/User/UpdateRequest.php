@@ -24,10 +24,10 @@ class UpdateRequest
      */
     public function rules()
     {
+//        dd($this->user_id);
         return [
             'name' => 'required|string',
             'email' => 'required|string|email| unique:users, email' . $this->user_id,
-            'password' => 'required|string',
             'role' => 'required|integer'
         ];
     }
@@ -38,8 +38,6 @@ class UpdateRequest
             'name.string' => 'Поле повинно бути строкового типу!',
             'email.required' => 'Поле повинно бути заповненим!',
             'email.string' => 'Поле повинно бути строкового типу!',
-            'password.required' => 'Поле повинно бути заповненим!',
-            'password.string' => 'Поле повинно бути строкового типу!',
             'role.required' => 'Поле повинно бути заповненим!',
             'role.integer' => 'Поле повинно бути цілочисельного типу типу!',
             'email.unique' => 'Ця електронна пошта зайнята!'

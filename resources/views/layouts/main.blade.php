@@ -39,12 +39,34 @@
                                 <li class="nav-item">
                                     <a href="#" class="nav-link"><i class="mdi mdi-magnify"></i></a>
                                 </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">Вхід</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link">Реєстрація</a>
-                                </li>
+                                @auth()
+                                    <li class="nav-item">
+                                        <a href="#" class="nav-link">зайшов {{auth()->user()->name}}</a>
+                                    </li>
+                                @if(auth()->user()->role == 0)
+                                        <li class="nav-item">
+                                            <form action="{{route('admin.main.index')}}" >
+                                                <input type="submit" class="btn btn-primary" value="admin">
+                                            </form>
+                                        </li>
+                                    @endif
+
+                                    <li class="nav-item">
+                                        <form action="{{route('logout')}}" method="post">
+                                            @csrf
+                                            <input type="submit" class="btn btn-primary" value="Вийти">
+                                        </form>
+                                    </li>
+                                @endauth
+                                @guest()
+                                    <li class="nav-item">
+                                        <a href="{{route('login')}}" class="nav-link">Вхід</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a href="{{route('register')}}" class="nav-link">Реєстрація</a>
+                                    </li>
+                                @endguest
+
                             </ul>
                         </div>
                     </div>

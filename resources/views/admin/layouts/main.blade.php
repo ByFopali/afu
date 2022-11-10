@@ -6,7 +6,8 @@
     <title>AdminLTE 3 | Dashboard</title>
 
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{asset('plugins/fontawesome-free/css/all.min.css')}}">
     <!-- Ionicons -->
@@ -23,28 +24,40 @@
 
     <!-- Preloader -->
     <div class="preloader flex-column justify-content-center align-items-center">
-        <img class="animation__shake" src="{{asset('dist/img/AdminLTELogo.png')}}" alt="AdminLTELogo" height="60" width="60">
+        <img class="animation__shake" src="{{asset('dist/img/AdminLTELogo.png')}}" alt="AdminLTELogo" height="60"
+             width="60">
     </div>
 
     <!-- Navbar -->
-    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light ">
+        <div class="col-12 d-flex justify-content-between">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <form action="{{route('logout')}}" method="post">
+                        @csrf
+                        <input type="submit" class="btn btn-primary" value="Вийти">
+                    </form>
+                </li>
+            </ul>
+        </div>
         <!-- Left navbar links -->
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-            </li>
-        </ul>
+
     </nav>
     <!-- /.navbar -->
 
 
-@include('admin.includes.sidebar')
+    @include('admin.includes.sidebar')
     @yield('content')
     <footer class="main-footer">
         <strong>From podval with love
-        <div class="float-right d-none d-sm-inline-block">
-            <b>Version</b> 6.6.6
-        </div>
+            <div class="float-right d-none d-sm-inline-block">
+                <b>Version</b> 6.6.6
+            </div>
     </footer>
 
     <!-- Control Sidebar -->
@@ -78,19 +91,20 @@
 </script>
 //VisibilityBtn
 <script>
-const visibilityBtn = document.getElementById("VisibilityBtn");
-visibilityBtn.addEventListener("click", toggleVisibility);
-function toggleVisibility(){
-    const passwordInput = document.getElementById("password3");
-    if(passwordInput.type === "password"){
-        passwordInput.type = "text";
-    }else{
-        passwordInput.type = "password";
+    const visibilityBtn = document.getElementById("VisibilityBtn");
+    visibilityBtn.addEventListener("click", toggleVisibility);
+
+    function toggleVisibility() {
+        const passwordInput = document.getElementById("password3");
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+        } else {
+            passwordInput.type = "password";
+        }
     }
-}
 </script>
 <style>
-    .custom-file-label:lang(en)~.custom-file-label::after{
+    .custom-file-label:lang(en) ~ .custom-file-label::after {
         content: "Огляд";
     }
 </style>
