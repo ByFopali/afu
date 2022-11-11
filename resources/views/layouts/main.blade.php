@@ -99,13 +99,13 @@
                                             </button>
                                         </li>
                                         <li class="nav-item active">
-                                            <a class="nav-link" href="#">Головна</a>
+                                            <a class="nav-link" href="{{route('main.index')}}">Головна</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">Звання</a>
+                                            <a class="nav-link" href="{{route('main.ranks')}}">Звання</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">Підрозділи</a>
+                                            <a class="nav-link" href="{{route('main.zsylists')}}">Підрозділи</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -167,70 +167,25 @@
                             </ul>
                         </div>
                         <div class="col-sm-5">
-                            <h3 class="font-weight-bold mb-3">RECENT POSTS</h3>
-                            <div class="row">
+                            <h3 class="font-weight-bold mb-3">Недавні підрозділи</h3>
+                            @foreach($recentposts as $post)
+                            <div class="row pb-3">
                                 <div class="col-sm-12">
-                                    <div class="footer-border-bottom pb-2">
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <img
-                                                    src="{{asset('assets/images/dashboard/home_1.jpg')}}"
-                                                    alt="thumb"
-                                                    class="img-fluid"
-                                                />
+                                    <div class="footer-border-bottom">
+                                        <div class="row d-flex align-items-center">
+                                            <div class="col-2">
+                                                <img src="{{asset('storage/' . $post->image)}}" alt="thumb" class="img-fluid img-lg" style="margin: 0 auto; width: 500px;">
                                             </div>
-                                            <div class="col-9">
+                                            <div class="col-10">
                                                 <h5 class="font-weight-600">
-                                                    Cotton import from USA to soar was American traders
-                                                    predict
+                                                    {{$post->name}}
                                                 </h5>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="footer-border-bottom pb-2 pt-2">
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <img
-                                                    src="{{asset('assets/images/dashboard/home_2.jpg')}}"
-                                                    alt="thumb"
-                                                    class="img-fluid"
-                                                />
-                                            </div>
-                                            <div class="col-9">
-                                                <h5 class="font-weight-600">
-                                                    Cotton import from USA to soar was American traders
-                                                    predict
-                                                </h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div>
-                                        <div class="row">
-                                            <div class="col-3">
-                                                <img
-                                                    src="{{asset('assets/images/dashboard/home_3.jpg')}}"
-                                                    alt="thumb"
-                                                    class="img-fluid"
-                                                />
-                                            </div>
-                                            <div class="col-9">
-                                                <h5 class="font-weight-600 mb-3">
-                                                    Cotton import from USA to soar was American traders
-                                                    predict
-                                                </h5>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            @endforeach
                         </div>
 
                     </div>

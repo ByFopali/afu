@@ -15,4 +15,16 @@ class ExampleTest extends TestCase
     {
         $this->assertTrue(true);
     }
+    public function test_that_true_is_true1()
+    {
+        $this->assertTrue(true);
+    }
+    public function test_that_true_is_true2()
+    {
+        $this->assertTrue(true);
+    }
+    public function test_that_true_is_true3()
+    {
+        $this->assertTrue(true);
+    }
 }

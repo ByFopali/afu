@@ -81,13 +81,13 @@
                                             </button>
                                         </li>
                                         <li class="nav-item active">
-                                            <a class="nav-link" href="#">Головна</a>
+                                            <a class="nav-link" href="{{route('main.index')}}">Головна</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">Звання</a>
+                                            <a class="nav-link" href="{{route('main.ranks')}}">Звання</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a class="nav-link" href="#">Підрозділи</a>
+                                            <a class="nav-link" href="{{route('main.zsylists')}}">Підрозділи</a>
                                         </li>
                                     </ul>
                                 </div>

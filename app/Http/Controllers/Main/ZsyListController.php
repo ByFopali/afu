@@ -7,15 +7,13 @@ use App\Models\Rank;
 use App\Models\ZsyList;
 use Illuminate\Http\Request;
 
-class IndexController extends Controller
+class ZsyListController extends Controller
 {
     public function __invoke()
     {
         $recentposts = ZsyList::orderBy('created_at', 'DESC')->get()->take(3);
         $allposts = ZsyList::all();
-        $fourposts = ZsyList::orderBy('created_at', 'ASC')->get()->take(8);
-        $fiveposts = Rank::orderBy('created_at', 'DESC')->get()->take(5);
 //        dd($recentposts);
-        return view('main.index', compact('recentposts', 'allposts', 'fourposts', 'fiveposts'));
+        return view('main.zsylists', compact('recentposts', 'allposts'));
     }
 }

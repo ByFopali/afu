@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 */
 Route::group(['namespace' => 'App\Http\Controllers\Main'], function () {
     Route::get('/', 'IndexController')->name('main.index');
+    Route::get('/ranks', 'RankController')->name('main.ranks');
+    Route::get('/zsylists', 'ZsyListController')->name('main.zsylists');
 });
 
 Route::group(['namespace' => 'App\Http\Controllers\Admin', 'prefix' => 'admin', 'middleware' => ['auth', 'admin']], function () {
