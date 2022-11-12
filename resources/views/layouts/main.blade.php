@@ -169,10 +169,10 @@
                         <div class="col-sm-5">
                             <h3 class="font-weight-bold mb-3">Недавні підрозділи</h3>
                             @foreach($recentposts as $post)
-                            <div class="row pb-3">
+                            <div class="row pb-2">
                                 <div class="col-sm-12">
                                     <div class="footer-border-bottom">
-                                        <div class="row d-flex align-items-center">
+                                        <div class="row d-flex align-items-center mb-2">
                                             <div class="col-2">
                                                 <img src="{{asset('storage/' . $post->image)}}" alt="thumb" class="img-fluid img-lg" style="margin: 0 auto; width: 500px;">
                                             </div>
